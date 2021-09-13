@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico" type="image/icon type">
+    <title>MovieAPP</title>
+</head>
+
+<body>
+
+    <button class="tablink" onclick="openPage('Search', this, '#a18cd1')" id="defaultOpen">Search</button>
+    <button class="tablink" onclick="openPage('MyList', this, '#a18cd1')">My List</button>
+
+    <div id="Search" class="tabcontent">
+        <p>
+            <input on onchange="searchInputOnChange(this.value)" type="text" placeholder="Movie title"></input>
+        </p>
+        <div id="warning" class="alert alert-warning" role="alert" style="visibility:hidden">
+            Movie not found!
+        </div>
+        <div id="movie" class="container" style="visibility:hidden">
+
+        </div>
+    </div>
+
+    <div id="MyList" class="tabcontent">
+        <div id="MyListMovie" class="container">
+
+        </div>
+    </div>
+
+    <div id="MovieInfo" class="tabcontent">
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
